@@ -41,6 +41,12 @@ variable "instance_type" {
   description = "Instance type to use"
 }
 
+variable "instance_type_replica" {
+  description = "Instance type to use at replica instance"
+  type        = "string"
+  default     = ""
+}
+
 variable "publicly_accessible" {
   description = "Whether the DB should have a public IP address"
   default     = "false"
