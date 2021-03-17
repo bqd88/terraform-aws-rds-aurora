@@ -199,6 +199,11 @@ variable "performance_insights_enabled" {
   default     = false
 }
 
+variable "performance_insights_replica" {
+  description = "Specifies whether Performance Insights is enabled or not."
+  default     = false
+}
+
 variable "performance_insights_kms_key_id" {
   description = "The ARN for the KMS key to encrypt Performance Insights data."
   default     = ""
