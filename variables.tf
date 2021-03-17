@@ -209,6 +209,11 @@ variable "performance_insights_kms_key_id" {
   default     = ""
 }
 
+variable "performance_insights_kms_key_id_replica" {
+  description = "The ARN for the KMS key to encrypt Performance Insights data."
+  default     = ""
+}
+
 variable "iam_database_authentication_enabled" {
   description = "Specifies whether IAM Database authentication should be enabled or not. Not all versions and instances are supported. Refer to the AWS documentation to see which versions are supported."
   default     = false
