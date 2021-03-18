@@ -68,8 +68,8 @@ resource "aws_rds_cluster_instance" "this" {
   monitoring_interval             = "${var.monitoring_interval}"
   auto_minor_version_upgrade      = "${var.auto_minor_version_upgrade}"
   promotion_tier                  = "${count.index + 1}"
-  performance_insights_enabled    = "${count.index > 0 ? coalesce(var.performance_insights_replica, var.performance_insights_enabled) : var.performance_insights_enabled}"
-  performance_insights_kms_key_id = "${count.index > 0 ? coalesce(var.performance_insights_kms_key_id_replica, var.performance_insights_kms_key_id) : var.performance_insights_kms_key_id}"
+  performance_insights_enabled    = "${var.performance_insights_enabled}"
+  performance_insights_kms_key_id = "${var.performance_insights_kms_key_id}"
   copy_tags_to_snapshot           = "${var.copy_tags_to_snapshot}"
 
   tags = "${var.tags}"
